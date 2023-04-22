@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-lg {
+  @apply h-max w-max rounded-full bg-base-accent px-8 py-4 text-lg font-bold text-light md:px-16 md:py-8
+}
+
+.btn-md {
+  @apply h-max w-max rounded-full bg-base-accent px-8 py-4 text-lg font-bold text-light
+}
+
+.heading {
+  @apply text-3xl font-bold text-primary md:text-5xl
+}
+
+.heading2 {
+  @apply font-bold text-secondary
+}
+
+.page {
+  @apply flex min-h-screen w-full flex-col bg-base
+}

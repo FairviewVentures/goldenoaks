@@ -15,17 +15,11 @@ const HeroBanner = () => {
             The pulse of a thriving community at your fingertips & elevated
             amenities abound.
           </p>
-          <Link
-            href="/rates-and-floorplans"
-            className="w-max rounded-full bg-base-accent px-8 py-4 text-lg font-bold text-light"
-          >
+          <Link href="/rates-and-floorplans" className="btn-md">
             View Current Availibility
           </Link>
         </div>
-        <Link
-          href="/gallery"
-          className="h-max w-max rounded-full bg-base-accent px-8 py-4 text-lg font-bold text-light md:px-16 md:py-8"
-        >
+        <Link href="/gallery" className="btn-lg">
           Explore the Property
         </Link>
       </div>
