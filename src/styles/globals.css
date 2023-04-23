@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 .btn-lg {
   @apply h-max w-max rounded-full bg-base-accent px-8 py-4 text-lg font-bold text-light md:px-16 md:py-8
 }
@@ -15,7 +17,7 @@
 }
 
 .heading2 {
-  @apply font-bold text-secondary
+  @apply font-bold text-secondary uppercase
 }
 
 .page {
