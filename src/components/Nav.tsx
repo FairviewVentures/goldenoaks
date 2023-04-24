@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navlink =
@@ -9,13 +11,15 @@ const Nav = () => {
   return (
     <nav>
       <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between p-4">
-        <a href="/" className="flex items-center">
-          <img
+        <Link href="/" className="flex items-center">
+          <Image
             src="/logo.jpg"
             className="mr-3 h-8 md:h-16"
             alt="goldenoaks_logo"
+            width={100}
+            height={100}
           />
-        </a>
+        </Link>
         <button
           data-collapse-toggle="navbar-default"
           onClick={() => setIsOpen(!isOpen)}
@@ -42,32 +46,32 @@ const Nav = () => {
         <div className="hidden w-full md:block md:w-auto">
           <ul className="mt-4 flex flex-col items-center rounded-lg p-4 text-sm font-medium text-base-accent md:mt-0 md:flex-row md:space-x-4 md:border-0 md:p-0">
             <li>
-              <a href="/rates-and-floorplans" className={navlink}>
+              <Link href="/rates-and-floorplans" className={navlink}>
                 Rates & Floorplans
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/gallery" className={navlink}>
+              <Link href="/gallery" className={navlink}>
                 Gallery
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/neighborhood" className={navlink}>
+              <Link href="/neighborhood" className={navlink}>
                 Neighborhood
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/accessibility" className={navlink}>
+              <Link href="/accessibility" className={navlink}>
                 Accessibility
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/schedule"
                 className="block rounded-full border-2 border-base-accent font-semibold md:bg-transparent md:px-4 md:py-2"
               >
                 Schedule A Tour
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -75,32 +79,32 @@ const Nav = () => {
           <div className="w-full">
             <ul className="mt-4 flex flex-col items-center gap-4 rounded-lg p-4 text-sm font-medium text-base-accent md:mt-0 md:flex-row md:space-x-4 md:border-0 md:p-0">
               <li>
-                <a href="/rates-and-floorplans" className={navlink}>
+                <Link href="/rates-and-floorplans" className={navlink}>
                   Rates & Floorplans
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/gallery" className={navlink}>
+                <Link href="/gallery" className={navlink}>
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/neighborhood" className={navlink}>
+                <Link href="/neighborhood" className={navlink}>
                   Neighborhood
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/accessibility" className={navlink}>
+                <Link href="/accessibility" className={navlink}>
                   Accessibility
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/schedule"
                   className="block rounded-full border-2 border-base-accent px-4 py-2 font-semibold md:bg-transparent"
                 >
                   Schedule A Tour
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
