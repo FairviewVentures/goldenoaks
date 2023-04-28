@@ -12,7 +12,7 @@ const HeroCommunity = () => {
           height={1000}
         />
       </div>
-      <div className="flex h-2/3 flex-col gap-8 bg-light p-16 md:absolute md:translate-x-64 md:translate-y-32">
+      <div className="flex h-2/3 flex-col gap-8 bg-light p-8 md:absolute md:translate-x-64 md:translate-y-32 md:p-16">
         <h3 className="text-3xl font-semibold text-secondary md:text-4xl">
           Community Awaits
         </h3>

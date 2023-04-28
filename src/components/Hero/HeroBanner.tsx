@@ -11,7 +11,7 @@ const HeroBanner = () => {
             <br />
             Pasadena.
           </h1>
-          <p>
+          <p aria-label="The pulse of a thriving community at your fingertips & elevated amenities abound.">
             The pulse of a thriving community at your fingertips & elevated
             amenities abound.
           </p>

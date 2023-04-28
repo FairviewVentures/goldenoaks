@@ -62,7 +62,7 @@ const Neighborhood: NextPage = () => (
       <meta name="description" content="" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <main className="page">
+    <main className="page" lang="en">
       <Image
         src={"/neighborhood_banner.jpg"}
         width={1600}

@@ -10,7 +10,7 @@ const Accessibility: NextPage = () => (
       <meta name="description" content="" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <main className="page">
+    <main className="page" lang="en">
       <div className="mx-auto my-16 flex w-full max-w-6xl flex-col justify-between gap-4 p-4 md:p-16">
         <h1 className="heading">Accessibility Statement</h1>
         <div className="flex flex-col gap-4">

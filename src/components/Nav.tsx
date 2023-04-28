@@ -9,12 +9,12 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav>
+    <nav aria-label="Navigation" lang="en">
       <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between p-4">
         <Link href="/" className="flex items-center">
           <Image
             src="/logo.jpg"
-            className="mr-3 h-8 md:h-16"
+            className="mr-3 md:h-auto md:w-32"
             alt="goldenoaks_logo"
             width={100}
             height={100}

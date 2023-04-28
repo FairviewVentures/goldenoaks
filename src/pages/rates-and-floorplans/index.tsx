@@ -10,7 +10,7 @@ const Home: NextPage = () => (
       <meta name="description" content="" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <main className="page">
+    <main className="page" lang="en">
       <div className="mx-auto flex w-full max-w-6xl flex-col justify-between gap-4 p-4 md:flex-row">
         <div className="flex flex-col gap-4">
           <h3 className="heading2">GOLDEN OAKS APARTMENTS</h3>

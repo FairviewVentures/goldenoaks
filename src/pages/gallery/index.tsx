@@ -38,7 +38,7 @@ const Gallery: NextPage = () => (
       <meta name="description" content="" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <main className="page">
+    <main className="page" lang="en">
       <div className="mx-auto my-16 flex w-full max-w-6xl flex-col justify-between gap-4 p-4">
         <p className="heading2 mx-auto">
           golden oaks apartments in south pasadena, ca
@@ -52,10 +52,10 @@ const Gallery: NextPage = () => (
             <Image src={"/gallery/3.jpg"} alt="3" width={500} height={500} />
           </div>
         </div>
-        <div className="flex flex-col gap-4 md:flex-row">
-          <Image src={"/gallery/4.jpg"} alt="4" width={500} height={500} />
-          <Image src={"/gallery/5.jpg"} alt="5" width={500} height={500} />
-          <Image src={"/gallery/6.jpg"} alt="6" width={500} height={500} />
+        <div className="mx-auto flex flex-col gap-4 md:flex-row">
+          <Image src={"/gallery/4.jpg"} alt="4" width={350} height={350} />
+          <Image src={"/gallery/5.jpg"} alt="5" width={350} height={350} />
+          <Image src={"/gallery/6.jpg"} alt="6" width={350} height={350} />
         </div>
         <div className="flex h-max w-full flex-col justify-evenly gap-4 md:flex-row">
           <Image src={"/gallery/7.jpg"} alt="7" width={500} height={500} />
@@ -73,10 +73,10 @@ const Gallery: NextPage = () => (
           showFullscreenButton={false}
           showPlayButton={false}
         />
-        <div className="flex h-max w-full flex-col gap-4 md:flex-row">
-          <Image src={"/gallery/16.jpg"} alt="16" width={500} height={500} />
-          <Image src={"/gallery/17.jpg"} alt="17" width={500} height={500} />
-          <Image src={"/gallery/18.jpg"} alt="18" width={500} height={500} />
+        <div className="mx-auto flex h-max w-full flex-col gap-4 md:flex-row">
+          <Image src={"/gallery/16.jpg"} alt="16" width={350} height={350} />
+          <Image src={"/gallery/17.jpg"} alt="17" width={350} height={350} />
+          <Image src={"/gallery/18.jpg"} alt="18" width={350} height={350} />
         </div>
         <Link href="/rates-and-floorplans" className="btn-md mx-auto">
           View Rates and Floorplans
