@@ -5,7 +5,9 @@ const HeroBanner = () => {
     <div className="flex w-full bg-base text-base-content">
       <div className="mx-auto my-16 flex max-w-6xl flex-col gap-8 p-4 md:flex-row md:items-center">
         <div className="flex flex-col gap-8">
-          <h3 className="font-bold text-secondary">GOLDEN OAKS APARTMENTS:</h3>
+          <span className="font-bold text-secondary">
+            GOLDEN OAKS APARTMENTS:
+          </span>
           <h1 className="text-3xl font-bold text-primary md:text-5xl">
             Luxury living in South
             <br />

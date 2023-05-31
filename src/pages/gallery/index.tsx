@@ -81,9 +81,9 @@ const Gallery: NextPage = () => (
         <Link href="/rates-and-floorplans" className="btn-md mx-auto">
           View Rates and Floorplans
         </Link>
-        <h2 className="mx-auto font-serif text-2xl text-primary md:text-4xl">
+        <p className="mx-auto font-serif text-2xl text-primary md:text-4xl">
           (626) 799-4164
-        </h2>
+        </p>
       </div>
     </main>
   </>

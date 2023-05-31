@@ -13,9 +13,9 @@ const HeroCommunity = () => {
         />
       </div>
       <div className="flex h-2/3 flex-col gap-8 bg-light p-8 md:absolute md:translate-x-64 md:translate-y-32 md:p-16">
-        <h3 className="text-3xl font-semibold text-secondary md:text-4xl">
+        <h2 className="text-3xl font-semibold text-secondary md:text-4xl">
           Community Awaits
-        </h3>
+        </h2>
         <p className="font-serif text-lg text-base-content">
           With a Walk Score of 91/100, Golden Oaks Apartments is perfectly
           situated in a prime part of the coveted city of South Pasadena, renown

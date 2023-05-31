@@ -11,6 +11,7 @@ export default {
         "base-accent": "#656461",
         "base-content": "#4a4a4a",
         light: "#ffffff",
+        dark: "#010101",
       },
     },
   },

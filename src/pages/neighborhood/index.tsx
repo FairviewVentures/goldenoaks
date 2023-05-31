@@ -70,7 +70,7 @@ const Neighborhood: NextPage = () => (
         alt="neighborhood banner"
         className="w-full"
       />
-
+      <h1 className="heading mx-auto py-8">Our Neighborhood</h1>
       <div className="mx-auto my-16 flex w-full max-w-6xl flex-col justify-between gap-4 p-4 md:flex-row">
         <p className="font-serif text-lg text-base-content">
           Located in South Pasadena&apos;s contemporary Mission District, an

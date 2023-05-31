@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const navlink =
-  "block rounded px-2 py-2 md:bg-transparent md:p-0 font-semibold";
+  "block rounded px-2 py-2 md:bg-transparent md:p-0 font-semibold text-dark";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
