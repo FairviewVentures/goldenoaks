@@ -14,9 +14,16 @@ const arrow =
 // Swipeable photo carousel built on native scroll snapping. It does not
 // auto-advance, so visitors control the pace (WCAG 2.2.2).
 const Carousel = ({ photos, label }: Props) => {
-  const track = useRef<HTMLUListElement>(null);
+  const track = useRef<HTMLDivElement>(null);
   const thumbs = useRef<HTMLUListElement>(null);
   const [active, setActive] = useState(0);
+  // Photos load only once they (or a neighbour) have been shown. Lazy
+  // loading alone is not enough here: browsers prefetch lazy images that sit
+  // just beside the viewport, which would pull in several large photos on
+  // first load.
+  const [shown, setShown] = useState<ReadonlySet<number>>(new Set([0]));
+  const show = (index: number) =>
+    setShown((prev) => (prev.has(index) ? prev : new Set([...prev, index])));
 
   // Keep the current thumbnail visible in the thumbnail strip.
   useEffect(() => {
@@ -32,6 +39,7 @@ const Carousel = ({ photos, label }: Props) => {
     const el = track.current;
     if (!el) return;
     const next = (index + photos.length) % photos.length;
+    show(next);
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
@@ -44,19 +52,23 @@ const Carousel = ({ photos, label }: Props) => {
   const onScroll = () => {
     const el = track.current;
     if (!el) return;
-    setActive(Math.round(el.scrollLeft / el.clientWidth));
+    const index = Math.round(el.scrollLeft / el.clientWidth);
+    // Only count a photo as shown once scrolling settles on it, so jumping
+    // across the strip does not load every photo in between.
+    if (Math.abs(el.scrollLeft - index * el.clientWidth) < 2) show(index);
+    setActive(index);
   };
 
   return (
     <section aria-roledescription="carousel" aria-label={label}>
       <div className="relative">
-        <ul
+        <div
           ref={track}
           onScroll={onScroll}
           className="flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {photos.map((photo, index) => (
-            <li
+            <div
               key={photo.src}
               className="w-full shrink-0 snap-center"
               role="group"
@@ -65,18 +77,21 @@ const Carousel = ({ photos, label }: Props) => {
               aria-hidden={index !== active}
             >
               <img
-                src={photo.src}
+                src={
+                  [index - 1, index, index + 1].some((i) => shown.has(i))
+                    ? photo.src
+                    : undefined
+                }
                 width={photo.width}
                 height={photo.height}
                 alt={photoAlt(photo, index, photos.length)}
-                // Load the current photo and its neighbours right away.
-                loading={Math.abs(index - active) <= 1 ? "eager" : "lazy"}
+                loading={index === 0 ? "eager" : "lazy"}
                 decoding="async"
                 className="mx-auto aspect-[4/3] h-auto w-full object-contain md:aspect-auto md:h-[60vh] md:max-h-[640px]"
               />
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
         <button
           type="button"
           onClick={() => goTo(active - 1)}
