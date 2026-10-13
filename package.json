@@ -8,25 +8,24 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "next": "~16.4.0",
     "react": "~19.3.0",
-    "react-dom": "~19.3.0",
-    "react-image-gallery": "~1.4.0",
-    "react-photo-album": "~2.4.1"
+    "react-dom": "~19.3.0"
   },
   "devDependencies": {
     "@types/node": "~22.20.0",
     "@types/react": "~19.3.0",
     "@types/react-dom": "~19.3.0",
-    "@types/react-image-gallery": "~1.2.4",
     "eslint": "~9.39.5",
     "eslint-config-next": "~16.4.0",
     "postcss": "~8.5.30",
     "prettier": "~3.9.10",
     "prettier-plugin-tailwindcss": "~0.8.1",
+    "sharp": "~0.35.5",
     "tailwindcss": "~3.4.19",
     "typescript": "~5.9.3"
   }
