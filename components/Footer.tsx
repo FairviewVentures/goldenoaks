@@ -1,25 +1,37 @@
-import Link from "next/link";
 import { address, email, footer, phoneNumber } from "@/config";
 
 const Footer = () => {
   return (
     <footer className="flex flex-col-reverse items-center justify-between gap-8 px-4 py-8 md:flex-row md:gap-2 md:px-16">
-      <p className="text-center md:text-left">
+      <address className="text-center not-italic md:text-left">
         {address}
         <br />
-        {phoneNumber} | {email}
-      </p>
+        <a href={`tel:${phoneNumber}`} className="underline hover:no-underline">
+          {phoneNumber}
+        </a>{" "}
+        |{" "}
+        <a href={`mailto:${email}`} className="underline hover:no-underline">
+          {email}
+        </a>
+      </address>
       <ul className="flex flex-col items-center gap-2 md:flex-row md:gap-4">
         {footer.map((item, index) => (
           <li key={index}>
-            <Link
-              href={item.url}
-              target="_blank"
-              referrerPolicy="no-referrer"
-              className="underline hover:no-underline"
-            >
-              {item.name}
-            </Link>
+            {item.url.startsWith("mailto:") ? (
+              <a href={item.url} className="underline hover:no-underline">
+                {item.name}
+              </a>
+            ) : (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:no-underline"
+              >
+                {item.name}
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            )}
           </li>
         ))}
       </ul>

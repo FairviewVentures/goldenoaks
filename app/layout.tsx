@@ -26,8 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-black"
+        >
+          Skip to main content
+        </a>
         <Navbar />
-        {children}
+        <main id="main">{children}</main>
         <Footer />
       </body>
     </html>
