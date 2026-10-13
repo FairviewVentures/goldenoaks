@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  .h2 {
+    @apply text-xl md:text-2xl;
+  }
+
+  .blueh2 {
+    @apply text-xl font-bold uppercase text-blue-900;
+  }
+}
+.thumbnail-aspect-16-9 {
+  width: 100%;
+}
+
+.thumbnail-aspect-16-9 img {
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 16/9;
+}
