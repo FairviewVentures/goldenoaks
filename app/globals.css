@@ -14,13 +14,18 @@
   .blueh2 {
     @apply text-xl font-bold uppercase text-blue-900;
   }
-}
-.thumbnail-aspect-16-9 {
-  width: 100%;
+
+  .heading {
+    @apply text-3xl font-bold md:text-4xl;
+  }
+
+  .heading2 {
+    @apply text-xl font-bold md:text-2xl;
+  }
 }
 
-.thumbnail-aspect-16-9 img {
-  max-width: 100%;
-  max-height: 100%;
-  aspect-ratio: 16/9;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

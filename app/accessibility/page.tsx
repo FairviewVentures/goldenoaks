@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <div className="mx-auto my-16 flex w-full max-w-6xl flex-col justify-between gap-4 p-4 md:p-16">
+      <div className="mx-auto my-8 flex w-full max-w-6xl flex-col justify-between gap-4 p-4 md:p-16">
         <h1 className="heading">Accessibility Statement</h1>
         <div className="flex flex-col gap-4">
-          <h2 className="text-primary text-2xl md:text-4xl">
+          <h2 className="text-primary text-2xl md:text-3xl">
             Commitment to Digital Accessibility
           </h2>
           <p className="text-base-content">
@@ -27,7 +27,7 @@ export default function Page() {
           </p>
         </div>
         <div className="flex flex-col gap-4">
-          <h2 className="text-primary text-2xl md:text-4xl">
+          <h2 className="text-primary text-2xl md:text-3xl">
             Accessibility on Golden Oaks
           </h2>
           <p className="text-base-content">
