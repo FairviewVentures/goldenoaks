@@ -1,4 +1,4 @@
-import Caro from "@/components/Caro";
+import Carousel from "@/components/Carousel";
 import Floorplans from "@/components/Floorplans";
 import Image from "next/image";
 import { address, email, phoneNumber, photos } from "@/config";
@@ -9,8 +9,9 @@ export default function Home() {
       <section className="relative min-h-screen">
         <Image
           src={"/assets/landing.webp"}
-          alt="Downtown Pasadena"
-          loading="lazy"
+          alt=""
+          priority
+          sizes="100vw"
           className="absolute left-0 top-0 z-0 aspect-auto h-full max-h-screen w-full object-cover brightness-[60%]"
           width={1600}
           height={900}
@@ -54,7 +55,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col md:items-end">
-            <h3 className="whitespace-nowrap">Walk Score</h3>
+            <p className="whitespace-nowrap">Walk Score</p>
             <span className="text-4xl text-blue-900">96</span>
           </div>
         </div>
@@ -70,7 +71,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mx-auto my-16 max-w-screen-xl">
-        <Caro photos={photos} />
+        <Carousel photos={photos} label="Photos of Golden Oaks Apartments" />
       </section>
       <section className="mx-auto my-16 flex max-w-6xl flex-col items-center gap-8">
         <h2 className="h2">Floorplans</h2>
@@ -81,7 +82,15 @@ export default function Home() {
       <section className="mx-auto my-16 flex max-w-screen-xl flex-col gap-16 px-4 md:px-16">
         <div className="flex flex-col justify-between md:flex-row">
           <h2 className="h2">Map</h2>
-          <h3>1000 El Centro St, South Pasadena</h3>
+          <p>
+            1000 El Centro St, South Pasadena ·{" "}
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=1000+El+Centro+St+South+Pasadena+CA+91030"
+              className="underline"
+            >
+              Get directions
+            </a>
+          </p>
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13600.393805279511!2d-118.1665478513214!3d34.11295585516861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c48a29012853%3A0xcf7e99b4e1311b26!2s1000%20El%20Centro%20St%2C%20S%20Pasadena%2C%20CA%2091030!5e0!3m2!1sen!2sus!4v1697213897815!5m2!1sen!2sus"
@@ -96,9 +105,9 @@ export default function Home() {
         <div className="flex flex-col gap-4 md:items-center">
           <h2 className="text-3xl md:text-center md:text-4xl">Get in touch</h2>
         </div>
-        <div
+        <address
           id="contact"
-          className="flex flex-col items-center gap-2 px-4 text-center text-lg"
+          className="flex scroll-mt-8 flex-col items-center gap-2 px-4 text-center text-lg not-italic"
         >
           <a href={`tel:${phoneNumber}`} className="underline">
             {phoneNumber}
@@ -107,7 +116,7 @@ export default function Home() {
             {email}
           </a>
           <p>{address}</p>
-        </div>
+        </address>
       </section>
     </>
   );

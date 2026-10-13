@@ -1,3 +1,5 @@
+import type { Photo } from "@/lib/photos";
+
 export const phoneNumber = "626-799-4164";
 
 export const email = "robin@goldenoaks.biz";
@@ -83,16 +85,71 @@ export const footer = [
   },
 ];
 
-export const photos = [
-  { src: "/assets/DSC_0591.webp", width: 1200, height: 800 },
-  { src: "/assets/DSC_0612.webp", width: 1200, height: 800 },
-  { src: "/assets/DSC_0597.webp", width: 800, height: 1200 },
-  { src: "/assets/DSC_0573.webp", width: 1200, height: 784 },
-  { src: "/assets/DSC_0625.webp", width: 1200, height: 800 },
-  { src: "/assets/DSC_0583.webp", width: 1200, height: 797 },
-  { src: "/assets/DSC_0587.webp", width: 1200, height: 1800 },
-  { src: "/assets/DSC_0695.webp", width: 1200, height: 800 },
-  { src: "/assets/DSC_0698.webp", width: 1200, height: 800 },
-  { src: "/assets/DSC_0707.webp", width: 1200, height: 800 },
-  { src: "/assets/DSC_0735.webp", width: 1200, height: 800 },
+export const photos: Photo[] = [
+  {
+    src: "/assets/DSC_0591.webp",
+    width: 1200,
+    height: 800,
+    alt: "Living room with sofa and open kitchen",
+  },
+  {
+    src: "/assets/DSC_0612.webp",
+    width: 1200,
+    height: 800,
+    alt: "Living and dining area with hardwood floors",
+  },
+  {
+    src: "/assets/DSC_0597.webp",
+    width: 800,
+    height: 1200,
+    alt: "Kitchen with dark wood cabinets and stainless steel refrigerator",
+  },
+  {
+    src: "/assets/DSC_0573.webp",
+    width: 1200,
+    height: 784,
+    alt: "Carpeted bedroom with daybed",
+  },
+  {
+    src: "/assets/DSC_0625.webp",
+    width: 1200,
+    height: 800,
+    alt: "Bathroom with glass shower door and vanity",
+  },
+  {
+    src: "/assets/DSC_0583.webp",
+    width: 1200,
+    height: 797,
+    alt: "Walk-in closet",
+  },
+  {
+    src: "/assets/DSC_0587.webp",
+    width: 1067,
+    height: 1600,
+    alt: "Hallway with in-unit washer and dryer closet",
+  },
+  {
+    src: "/assets/DSC_0695.webp",
+    width: 1200,
+    height: 800,
+    alt: "Tree-lined neighborhood street with a corner café",
+  },
+  {
+    src: "/assets/DSC_0698.webp",
+    width: 1200,
+    height: 800,
+    alt: "Nearby park with lawn and walking path",
+  },
+  {
+    src: "/assets/DSC_0707.webp",
+    width: 1200,
+    height: 800,
+    alt: "Downtown South Pasadena intersection",
+  },
+  {
+    src: "/assets/DSC_0735.webp",
+    width: 1200,
+    height: 800,
+    alt: "Metro light-rail train crossing a downtown street",
+  },
 ];
