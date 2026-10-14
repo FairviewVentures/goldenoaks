@@ -2,7 +2,7 @@ import type { Photo } from "@/lib/photos";
 
 export const phoneNumber = "626-799-4164";
 
-export const email = "robin@goldenoaks.biz";
+export const email = "goldenoaks1@gmail.com";
 
 export const address = "1000 El Centro St. South Pasadena, CA 91030";
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { email } from "@/config";
 
 export const metadata: Metadata = {
   title: "Accessibility",
@@ -132,8 +133,8 @@ export default function Page() {
             notice anything that doesn&apos;t work for you or your assistive
             technology, please let us know. We will do our best to assist you
             and resolve issues. Email us at{" "}
-            <Link href="mailto:goldenoak122@sbcglobal.net?subject=Accessibility%20Feedback">
-              goldenoak122@sbcglobal.net
+            <Link href={`mailto:${email}?subject=Accessibility%20Feedback`}>
+              {email}
             </Link>
           </p>
           <h3 className="heading2">Certification of Compliance</h3>
