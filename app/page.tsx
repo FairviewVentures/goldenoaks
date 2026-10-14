@@ -101,7 +101,7 @@ export default function Home() {
           className="w-full md:h-[640px]"
         ></iframe>
       </section>
-      <section className="flex flex-col items-center justify-center gap-8 bg-blue-900 py-16 text-white">
+      <section className="flex flex-col items-center justify-center gap-8 bg-black py-16 text-white">
         <div className="flex flex-col gap-4 md:items-center">
           <h2 className="text-3xl md:text-center md:text-4xl">Get in touch</h2>
         </div>
